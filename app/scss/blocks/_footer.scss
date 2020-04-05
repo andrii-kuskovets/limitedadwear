@@ -121,12 +121,14 @@
                 top: 0;
             }
 
-            &_active {
-                transform: rotate(180deg);
-            }
-
             img {
                 max-width: 155px;
+            }
+        }
+
+        .accordion__title.active {
+            &:after {
+                transform: rotate(180deg);
             }
         }
 

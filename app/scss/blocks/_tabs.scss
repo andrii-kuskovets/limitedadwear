@@ -5,10 +5,14 @@
     }
 
     &__item {
-        padding: 10px 15px;
-        border-bottom: 1px solid rgba($grey, .4);
         margin-bottom: 15px;
-        
+        border-bottom: 1px solid rgba($grey, .4);
+    }
+
+    &__name {
+        padding: 10px 15px 25px 15px;
+        cursor: pointer;
+
         &:after {
             content: '';
             background-image: url(../icons/triangular.svg);
@@ -22,17 +26,18 @@
             transform: rotate(180deg);
         }
 
-        &_active {
-            &:after {
-                transform: rotate(0deg);
-            }
-        }
-
+        
         span {
             font-family: 'Prexima-light', serif;
             font-size: 12px;
             color: rgba($grey, .4);
             text-transform: uppercase;
+        }
+    }
+
+    .tabs__name.active {
+        &:after {
+            transform: rotate(0deg);
         }
     }
 
@@ -43,13 +48,9 @@
         font-size: 14px;
         line-height: 1.79;
         letter-spacing: 0.56px;
-        text-align: left;
+        margin-bottom: 15px;
         color: $black3;
         padding: 0 10px;
-
-        &_active {
-            display: block;
-        }
 
         ul {
             li {

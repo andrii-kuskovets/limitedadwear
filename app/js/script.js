@@ -49,7 +49,7 @@ $(document).ready(function(){
         focusOnSelect: true
     });
     
-    $('a[data-slide]').click(function(e) {
+    $('a[data-slide]').on('click', function(e) {
         e.preventDefault();
         let slideno = $(this).data('slide');
         $('.slider__nav').slick('slickGoTo', slideno - 1);
@@ -67,4 +67,17 @@ $(document).ready(function(){
         arrows: false,
         dots: true
     });
+
+    //tabs
+    function slide(a, b) {
+        $(a).on('click', function() {
+            $(this).parent().siblings().find(b).hide();
+            $(this).parent().siblings( ).find(a).removeClass('active');
+            $(this).next(a).slideToggle();
+            $(this).toggleClass('active');
+        });
+    }
+
+    slide($('.tabs__name'), $('.tabs__descr'));
+    slide($('.accordion__title'), $('.accordion__list'));
 });

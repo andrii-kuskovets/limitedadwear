@@ -23,5 +23,9 @@
 
     .price {
         text-align: center;
+
+        &__offer {
+            margin: 10px auto;
+        }
     }
 }

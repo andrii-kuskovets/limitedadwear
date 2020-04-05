@@ -1,10 +1,20 @@
 .header {
-    margin: 10px 0;
+    height: 75px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &__fixed {
+        position: fixed;
+        width: 100%;
+        background-color: rgba($white, .7);
+        z-index: 1;
+    }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        padding: 10px 0;
     }
     &__logo {
         max-width: 177px;
@@ -53,5 +63,4 @@
     &__login {
         border-right: 2px dotted $blue;
     }
-
 }

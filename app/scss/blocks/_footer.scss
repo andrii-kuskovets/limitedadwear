@@ -4,13 +4,6 @@
         flex-direction: column;
     }
 
-    h4 {
-        font-family: 'Proxima-light', serif;
-        font-size: 12px;
-        color: $gold;
-        text-transform: uppercase;
-    }
-
     .social {
         margin-bottom: 30px;
 
@@ -81,18 +74,15 @@
             width: 262px;
             padding: 12px 15px;
             border: 1px solid $gold;
-            font-family: 'Proxima-light', serif;
-            font-size: 12px;
+            font-family: $general-font;
+            font-size: $small;
             color: rgba($grey, .6);
         }
 
         &__send {
+            @include bg-img (url(../../icons/paper-plane.svg));
             background-color: transparent;
             border: none;
-            background-image: url(../../icons/paper-plane.svg);
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
             width: 15px;
             height: 15px;
             position: absolute;
@@ -108,15 +98,10 @@
             position: relative;
 
             &:after {
-                content: '';
-                background-image: url(../icons/down-arrow.svg);
-                background-position: center  center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: block;
+                @include pseudo;
+                @include bg-img (url(../icons/down-arrow.svg));
                 width: 12px;
                 height: 12px;
-                position: absolute;
                 right: 5%;
                 top: 0;
             }
@@ -140,8 +125,8 @@
             }
 
             a {
-                font-family: 'Proxima-light', serif;
-                font-size: 12px;
+                font-family: $light-font;
+                font-size: $small;
                 color: $blue;
                 text-decoration: none;
                 border-bottom: 1px solid rgba($blue, .4);

@@ -12,24 +12,22 @@
     &__name {
         padding: 10px 15px 25px 15px;
         cursor: pointer;
+        position: relative;
 
         &:after {
-            content: '';
-            background-image: url(../icons/triangular.svg);
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            @include pseudo;
+            @include bg-img (url(../icons/triangular.svg));
             width: 15px;
             height: 15px;
-            position: absolute;
             right: 10%;
+            top: 10px;
             transform: rotate(180deg);
         }
 
         
         span {
             font-family: 'Prexima-light', serif;
-            font-size: 12px;
+            font-size: $small;
             color: rgba($grey, .4);
             text-transform: uppercase;
         }
@@ -41,11 +39,11 @@
         }
     }
 
-    &__descr {
+    &__description {
         display: none;
         max-width: 783px;
-        font-family: 'Proxima-light', serif;
-        font-size: 14px;
+        font-family: $light-font;
+        font-size: $normal;
         line-height: 1.79;
         letter-spacing: 0.56px;
         margin-bottom: 15px;
@@ -57,7 +55,7 @@
                 
                 &::before {
                     content: '\2022';
-                    font-size: 14px;
+                    font-size: $normal;
                     color: $gold;
                     padding-right: 10px;
                 }

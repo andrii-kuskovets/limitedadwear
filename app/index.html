@@ -6,77 +6,75 @@
     <title>Limitedadwear</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="body body__curtain">
     <header class="header">
-        <div class="header__fixed">
-            <div class="out">
-                <div class="out__wrapper">
-                    <div class="out__text">
-                        <span class="out__phrase out__phrase_bold">free 2 day shipping</span> 
-                        <span class="out__phrase">for orders over 300$</span>
-                    </div>
-                    <span class="out__close"></span>
+        <div class="promo">
+            <div class="promo__wrapper">
+                <div class="promo__text">
+                    <span class="promo__phrase promo__phrase_bold">free 2 day shipping</span> 
+                    <span class="promo__phrase">for orders over 300$</span>
                 </div>
+                <span class="promo__close"></span>
             </div>
-            <div class="container">
-                <div class="header__wrapper">
-                    <div class="menu">
-                        <nav class="menu__nav">
-                            <ul>
-                                <li><a href="#">new arrivals</a></li>
-                                <li class='menu__toplist'>
-                                    <a href="#">women</a>
-                                    <ul class="menu__sublist">
-                                        <li><a href="#">new</a></li>
-                                        <li><a href="#">clothing</a></li>
-                                        <li><a href="#">shoes</a></li>
-                                        <li><a href="#">accessories</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu__toplist">
-                                    <a href="#">men</a>
-                                    <ul class="menu__sublist">
-                                        <li><a href="#">clothing</a></li>
-                                        <li><a href="#">shoes</a></li>
-                                        <li><a href="#">accessories</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">topseller</a></li>
-                                <li><a href="#">gift sertificates</a></li>
-                                <ul class="header__menu header__menu_active">
-                                    <li><a href="#">welcome</a></li>
-                                    <li><a class="header__login" href="#">login </a><a href="#">register</a></li>
-                                    <li><a href="#">wishlist</a></li>
-                                    <li><a href="#">gift registry</a></li>
-                                    <li><a href="#">store locator</a></li>
+        </div>
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="menu">
+                    <nav class="menu__nav">
+                        <ul>
+                            <li><a href="#">new arrivals</a></li>
+                            <li class='menu__toplist'>
+                                <a href="#">women</a>
+                                <ul class="menu__sublist">
+                                    <li><a href="#">new</a></li>
+                                    <li><a href="#">clothing</a></li>
+                                    <li><a href="#">shoes</a></li>
+                                    <li><a href="#">accessories</a></li>
                                 </ul>
+                            </li>
+                            <li class="menu__toplist">
+                                <a href="#">men</a>
+                                <ul class="menu__sublist">
+                                    <li><a href="#">clothing</a></li>
+                                    <li><a href="#">shoes</a></li>
+                                    <li><a href="#">accessories</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">topseller</a></li>
+                            <li><a href="#">gift sertificates</a></li>
+                            <ul class="header__menu header__menu_active">
+                                <li><a href="#">welcome</a></li>
+                                <li><a class="header__login" href="#">login </a><a href="#">register</a></li>
+                                <li><a href="#">wishlist</a></li>
+                                <li><a href="#">gift registry</a></li>
+                                <li><a href="#">store locator</a></li>
                             </ul>
-                        </nav>
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="header__logo">
-                        <a href="#"><img src="img/logo.png" alt="" class="header__img"></a>
-                    </div>
-                    <div class="header__navigation">
-                        <ul class="header__menu">
-                            <li><a href="#">welcome</a></li>
-                            <li><a class="header__login" href="#">login</a><a href="#">register</a></li>
-                            <li><a href="#">wishlist</a></li>
-                            <li><a href="#">gift registry</a></li>
-                            <li><a href="#">store locator</a></li>
                         </ul>
-                        <div class="search">
-                            <input type="text" class="search__input" placeholder="Search">
-                            <img class="search__icon" src="icons/search.svg" alt="search">
-                        </div>
-                        <div class="header__cart">
-                            <img src="icons/cart.svg" alt="cart">
-                            <span>cart</span>
-                        </div>
+                    </nav>
+                    <button class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header__logo">
+                    <a href="#"><img src="img/logo.png" alt="" class="header__img"></a>
+                </div>
+                <div class="header__navigation">
+                    <ul class="header__menu">
+                        <li><a href="#">welcome</a></li>
+                        <li><a class="header__login" href="#">login</a><a href="#">register</a></li>
+                        <li><a href="#">wishlist</a></li>
+                        <li><a href="#">gift registry</a></li>
+                        <li><a href="#">store locator</a></li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Search">
+                        <img class="search__icon" src="icons/search.svg" alt="search">
+                    </div>
+                    <div class="header__cart cart">
+                        <img src="icons/cart.svg" alt="cart">
+                        <span>cart</span><span class="cart__value"></span>
                     </div>
                 </div>
             </div>
@@ -118,7 +116,7 @@
                             </div>
                         </div>
                         <div class="price">
-                            <span class="price__new">$285.00</span>
+                            <span class="price__new">$<span class="price__value">285.00</span></span>
                             <span class="price__old">$290</span>
                             <span class="price__offer">Special offer 20% off on Category</span>
                         </div>
@@ -126,37 +124,44 @@
                 </div>
                 <div class="product__options">
                     <div class="color">
-                        <h5 class="color__change">color:<span></span></h5>
+                        <h5 class="color__title">color:<span class="color__change"></span></h5>
                         <ul class="color__list">
-                            <li><a  class="color__gold" href="#"></a></li>
-                            <li><a class="color__brown" href="#"></a></li>
+                            <li><button class="color__btn color__btn_gold" value="Gold"></button></li>
+                            <li><button class="color__btn color__btn_brown" value="Brown"></button></li>
                         </ul>
                     </div>
                     <div class="size">
-                        <h5 class="size__change">size:</h5>
+                        <h5 class="size__title">size:<span class="size__change"></span></h5>
                         <ul>
-                            <li><a href="#">s</a></li>
-                            <li><a href="#">m</a></li>
-                            <li><a href="#">l</a></li>
-                            <li><a href="#">xl</a></li>
+                            <li><button class="size__btn" value="S">s</button></li>
+                            <li><button class="size__btn" value="M">m</button></li>
+                            <li><button class="size__btn" value="L">l</button></li>
+                            <li><button class="size__btn" value="XL">xl</button></li>
                         </ul>
                     </div>
                     <div class="availability"><h5>availability: <span>In Stock</span></h5></div>
                     <div class="product__get">
-                        <div class="button">
+                        <div class="product__buttons">
                             <form class="quanity">
-                                <label for="choice">quantity</label>
-                                <input type="number" class="numb" min='1' max='' value="1">
+                                <h5>quantity</h5>
+                                <div class="quanity__calc">
+                                    <input type="number" class="numb" min='1' max='' value="1">
+                                    <span class="quanity__result"></span>
+                                </div>
                             </form>
-                            <button class="button__add">add to cart</button>
-                            <button class="button__wishlist"><span> add to wishlist</span></button>
-                            <button class="button__gift"><span>add to giftregistry</span></button>
+                            <button class="btn btn_fill">add to cart</button>
+                            <button class="btn btn_with-icon"><span class='btn__wishlist'> add to wishlist</span></button>
+                            <button class="btn btn_with-icon"><span class="btn__gift">add to giftregistry</span></button>
                         </div>
                         <div class="share">
                             <span class="share__title">share</span>
-                            <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
-                            <a class="share__google" href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-                            <a class="share__gmail" href="mailto:info@example.com?subject=subject&cc=cc@example.com"></a>
+                            <ul class="share__list">
+                                <li><div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div></li>
+                                <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></li>
+                                <li><a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a></li>
+                                <li><a class="share__google" href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a></li>
+                                <li><a class="share__gmail" href="mailto:info@example.com?subject=subject&cc=cc@example.com"></a></li>
+                            </ul>
                         </div>
                     </div>
                     <a class="product__print" href="#">Print Page</a>
@@ -166,7 +171,7 @@
                 <ul class="tabs__items">
                     <div class="tabs__item">
                         <li class="tabs__name"><span>description</span></li>
-                        <div class="tabs__descr">
+                        <div class="tabs__description">
                             <p>Lorem ipsum dolor sit amet,<span>consectetur</span> adipiscing elit. Donec sit amet lorem in lectus rhoncus malesuada at ac urna. 
                                 Integer posuere arcu diam, at placerat dolor ullamcorper eu. Donec a metus eu arcu iaculis sodales quis eleifend quam. 
                                 Nulla sit amet eros id massa pulvinar iaculis. 
@@ -181,7 +186,7 @@
                     </div>
                     <div class="tabs__item">
                         <li class="tabs__name"><span>Product details</span></li>
-                        <div class="tabs__descr">
+                        <div class="tabs__description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lorem in lectus rhoncus malesuada at ac urna. 
                                 Integer posuere arcu diam, at placerat dolor ullamcorper eu. Donec a metus eu arcu iaculis sodales quis eleifend quam. 
                                 Nulla sit amet eros id massa pulvinar iaculis. 
@@ -202,7 +207,7 @@
                     </div>
                     <div class="tabs__item">
                         <li class="tabs__name"><span>reviews</span></li>
-                        <div class="tabs__descr">
+                        <div class="tabs__description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lorem in lectus rhoncus malesuada at ac urna. 
                                 Integer posuere arcu diam, at placerat dolor ullamcorper eu. Donec a metus eu arcu iaculis sodales quis eleifend quam. 
                                 Nulla sit amet eros id massa pulvinar iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lorem in lectus rhoncus malesuada at ac urna. 
@@ -339,9 +344,9 @@
             </div>
         </div>
     </footer>
-    <div class="out">
+    <div class="promo">
         <div class="container">
-            <div class="out__text out__text_footer">
+            <div class="promo__text promo__text_footer">
                 <span>(c) All Copyright Lorem Ipsum Dolor</span> 
             </div>
         </div>
@@ -350,6 +355,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/number_plugin.js"></script>
     <script src="js/slick.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v6.0"></script>
     <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     <script src="js/script.js"></script>
 </body>

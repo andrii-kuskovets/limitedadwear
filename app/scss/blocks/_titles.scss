@@ -1,0 +1,50 @@
+h1 {
+    font-family: $general-font;
+    font-size: 32px;
+    color: $black2;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: $light-font;
+    font-size: $medium;
+    line-height: 2;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: $gold;
+}
+
+h3 {
+    font-family: $general-font;
+    font-size: $medium;
+    line-height: 1.71;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: $blue;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+}
+
+h4 {
+    font-family: $light-font;
+    font-size: $small;
+    color: $gold;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: $general-font;
+    font-size: $normal;
+    line-height: 1.71;
+    letter-spacing: 0.56px;
+    color: $grey;
+    text-transform: uppercase;
+
+    span {
+        color: $black;
+        text-transform: none;
+        padding-left: 4px;
+    }
+}
+

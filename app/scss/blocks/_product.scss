@@ -13,11 +13,13 @@
         border-top: 1px solid $grey;
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
         padding: 15px 0;
     }
 
     &__name {
         width: 40%;
+        margin-bottom: 15px;
     }
 
     &__info {
@@ -26,16 +28,9 @@
         width: 60%;
     }
 
-    &__title {
-        font-family: 'Proxima', serif;
-        font-size: 28px;
-        color: $black2;
-        text-transform: uppercase;
-    }
-
     &__subtitle {
-        font-family: 'Proxima', serif;
-        font-size: 12px;
+        font-family: $general-font;
+        font-size: $small;
         color: $grey;
     }
 
@@ -61,8 +56,8 @@
         span {
             padding: 0 4px;
             a {
-                font-family: 'Proxima-light', serif;
-                font-size: 12px;
+                font-family: $light-font;
+                font-size: $small;
                 color: $blue;
             }
         }
@@ -76,7 +71,7 @@
         
         label{
             cursor:pointer;
-            font-size: 20px;
+            font-size: $large;
             width: 15px;
             transition: all 0.5s ease-in;
         
@@ -99,28 +94,34 @@
 
     .share {
         display: flex;
-        flex-wrap: wrap;
         align-items: flex-end;
         justify-content: space-between;
         padding-bottom: 30px;
         border-bottom: 1px solid rgba($grey, .4);
 
         &__title {
-            font-family: 'Proxima', serif;
-            font-size: 14px;
+            font-family: $general-font;
+            font-size: $normal;
             line-height: 1.71;
             letter-spacing: 0.56px;
             color: $grey;
             text-transform: uppercase;
+            margin-right: 10px;
         }
 
-        &__google, &__gmail {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            a {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         }
 
         &__google {
@@ -134,10 +135,28 @@
 
     &__print {
         display: block;
-        font-family: 'Proxima-light', serif;
+        font-family: $light-font;
         font-size: 10px;
         text-align: right;
         margin: 5px 0;
         color: rgba($grey, .8);
     }
+
+    .quanity {
+        margin-bottom: 15px;
+        
+        &__calc {
+            display: flex;
+            align-items: flex-end;
+        }
+
+
+        &__result {
+            font-family: $general-font;
+            color: $black;
+            font-size: 28px;
+            margin-left: 30px;
+        }
+    }
+
 }

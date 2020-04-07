@@ -1,14 +1,9 @@
 .header {
-    height: 75px;
-    position: relative;
-    margin-bottom: 10px;
-
-    &__fixed {
         position: fixed;
         width: 100%;
-        background-color: rgba($white, .7);
+        background-color: $white;
+        top: 0;
         z-index: 1;
-    }
 
     &__wrapper {
         display: flex;
@@ -33,7 +28,7 @@
             flex-direction: column;
         }
         a {
-            font-family: Proxima-light;
+            font-family: $light-font;
             font-size: 10px;
             color: $blue;
             text-decoration: none;
@@ -49,6 +44,19 @@
         margin-left: 10px;
         display: flex;
         align-items: flex-end;
+        position: relative;
+
+        &_active {
+            &:after {
+                @include pseudo;
+                width: 15px;
+                height: 15px;
+                background-color: $pink;
+                border-radius: 50%;
+                right: 0;
+                bottom: 0;
+            }
+        }
 
         img {
             width: 30px;
@@ -57,6 +65,13 @@
 
         span {
             display: none;
+            font-family: $general-font;
+            font-size: $medium;
+            color: $black2;
+        }
+
+        .cart__value{
+            display: inline;
         }
     }
 

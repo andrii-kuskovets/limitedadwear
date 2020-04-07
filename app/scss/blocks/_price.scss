@@ -1,5 +1,5 @@
 .price {
-    font-family: 'Proxima', serif;
+    font-family: $general-font;
 
     &__new {
         font-size: 24px;
@@ -9,12 +9,11 @@
     &__old {
         display: inline-block;
         position: relative;
-        font-size: 20px;
+        font-size: $large;
         color: $grey;
 
         &:before {
-            content: '';
-            position: absolute;
+            @include pseudo;
             bottom: 50%;
             width: 100%;
             border-bottom: 1px solid $grey;
@@ -27,7 +26,7 @@
         max-width: 326px;
         color: $pink;
         background-color: rgba($gold, .1);
-        font-size: 12px;
+        font-size: $small;
         padding: 5px;
         text-align: center;
         margin: 10px 0;

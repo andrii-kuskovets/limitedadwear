@@ -3,7 +3,7 @@
     
     &__nav {
         background-color: rgba($blue, .8);
-        width: 50%;
+        width: 70%;
         height: 100vh;
         padding: 25px;
         margin-top: 14px;
@@ -30,8 +30,8 @@
         }
 
         a {
-            font-family: 'Proxima-light', serif;
-            font-size: 18px;
+            font-family: $light-font;
+            font-size: $medium;
             color: $black2;
             text-transform: uppercase;
             text-decoration: none;
@@ -42,11 +42,9 @@
             font-weight: 900;
 
             &:after {
-                content: '';
-                display: block;
+                @include pseudo;
                 height: 2px;
                 width: 100%;
-                position: absolute;
                 bottom: 0;
                 right: 1.25rem;
                 left: .25rem;
@@ -74,15 +72,24 @@
 
     .header__menu {
         a {
-            font-size: 14px;
+            font-size: $normal;
             line-height: 3;
             margin-right: 4px;
         }
     }
 
     .hamburger {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        border: none;
         width: 20px;
         cursor: pointer;
+
+        &:focus{
+            outline: none;
+        }
+
         
         span {
             display: block;

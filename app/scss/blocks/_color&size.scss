@@ -1,25 +1,13 @@
-.color, .size, .availability {
+.color, 
+.size, 
+.availability {
     margin-bottom: 15px;
-    h5 {
-        font-family: 'Proxima', serif;
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.56px;
-        color: $grey;
-        text-transform: uppercase;
-
-        span {
-            color: $black;
-            text-transform: none;
-            padding-left: 4px;
-        }
-    }
 
     li {
         display: inline-block;
         width: 35px;
         height: 35px;
-        padding: 5px;
+        padding: 3px;
         border: 1px solid $grey;
 
         &:hover, &:active {
@@ -31,28 +19,35 @@
         margin-left: 4px;
     }
 
-    a {
+    button {
         display: block;
         width: 100%;
         height: 100%;
-        text-decoration: none;
         text-align: center;
-        font-family: 'Proxima', serif;
+        font-family: $general-font;
         font-size: 13px;
-        text-align: center;
         line-height: 1.85;
         color: rgba($black2, 0.6);
         text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+
     }
 
+    .color__btn {
     
-    &__gold {
-        background-color: rgba($gold, .5);
-        
-    }
-
-    &__brown {
-        background-color: rgba(brown,.9);
+        &_gold {
+            background-color: rgba($gold, .5);
+            
+        }
+    
+        &_brown {
+            background-color: rgba(brown,.9);
+        }
     }
 }
 

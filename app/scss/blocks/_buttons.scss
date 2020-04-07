@@ -1,83 +1,43 @@
-.button {
+.product__buttons {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .quanity {
-        margin-bottom: 15px;
-        label {
-            font-family: 'Proxima', serif;
-            font-size: 14px;
-            line-height: 1.71;
-            letter-spacing: 0.56px;
-            color: $grey;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-    }
-
-    &__wishlist, &__gift {
+    .btn {
         border: 1px solid rgba($grey, .4);
-        padding: 20px 40px;
-        font-family: 'Proxima', serif;
-        font-size: 12px;
+        padding: 10px 20px;
+        font-family: $general-font;
+        font-size: $small;
         color: $blue;
         background-color: $white;
+        width: 200px;//226 for desktop
         text-transform: uppercase;
-        width: 226px;
         margin-bottom: 15px;
 
-        span {
-            position: relative;
+        &_fill {
+            font-size: $large;
+            color: $white;
+            background-color: $gold;
+            border: none;
         }
-    }
 
-        &__gift {
+        &_with-icon {
+            
             span {
+                position: relative;
+            }
+
+            .btn__wishlist {
                 &:after {
-                    content: '';
-                    background-image: url(../icons/gift.svg);
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: block;
-                    width: 12px;
-                    height: 12px;
-                    position: absolute;
-                    left: -25px;
-                    bottom: 25%;
+                    @include btn-icon(url(../icons/heart.svg));
+                }
+            }
+
+            .btn__gift {
+                &:after {
+                    @include btn-icon(url(../icons/gift.svg));
                 }
             }
         }
-
-        &__wishlist {
-            span {
-                &:after {
-                    content: '';
-                    background-image: url(../icons/heart.svg);
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: block;
-                    width: 12px;
-                    height: 12px;
-                    position: absolute;
-                    left: -25px;
-                    bottom: 25%;
-    
-                }
-            }
-        }
-
-    &__add {
-        font-family: 'Proxima', serif;
-        font-size: 24px;
-        letter-spacing: 0.96px;
-        color: $white;
-        background-color: $gold;
-        padding: 16px 18px;
-        border: none;
-        text-transform: uppercase;
-        margin-bottom: 15px;
     }
 }

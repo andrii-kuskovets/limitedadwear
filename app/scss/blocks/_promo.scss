@@ -1,4 +1,4 @@
-.out {
+.promo {
     background-color: $gold;
 
     &__wrapper {
@@ -11,8 +11,8 @@
         text-align: center;
         padding: 10px 0;
         width: 90%;
-        font-family: 'Proxima-light', serif;
-        font-size: 12px;
+        font-family: $light-font;
+        font-size: $small;
         line-height: 1.33;
 
         &_footer {
@@ -25,7 +25,7 @@
         text-transform: uppercase;
 
         &_bold {
-            font-family: Proxima-semibold, serif;
+            font-family: 'Proxima-semibold', serif;
         }
     }
 

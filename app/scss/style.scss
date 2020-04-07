@@ -4,9 +4,12 @@
 @import 'libs/fonts';
 @import 'libs/number_plugin';
 @import 'base/media-quaery_mixin';
+@import 'base/other-mixins';
+@import 'base/btn-mixin';
 @import 'libs/slick-theme';
 @import 'libs/slick';
-@import 'blocks/out';
+@import 'blocks/titles';
+@import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/search';
 @import 'blocks/menu';
@@ -18,6 +21,7 @@
 @import 'blocks/recomendation';
 @import 'blocks/banner';
 @import 'blocks/footer';
+@import 'blocks/body';
 
 * {
     box-sizing: border-box;

@@ -4,13 +4,13 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     &__text {
         text-align: center;
         padding: 10px 0;
-        width: 90%;
+        width: 98%;
         font-family: $light-font;
         font-size: $small;
         line-height: 1.33;
@@ -30,14 +30,10 @@
     }
 
     &__close {
+        @include bg-img (url(../icons/close.png));
         display: block;
         width: 10px;
         height: 10px;
-        background-image: url(../icons/close.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        align-content: right;
         cursor: pointer;
     }
 }

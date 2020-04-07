@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     //close promo text
     $('.promo__close').on('click', function () {
-        $('.promo').hide('slow');
+        $('.promo_hide').hide('slow');
     });
 
     //search

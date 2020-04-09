@@ -1,8 +1,0 @@
-@mixin btn-icon($bg-url) {
-    @include pseudo;
-    @include bg-img($bg-url);
-    width: 12px;
-    height: 12px;
-    left: -25px;
-    bottom: 25%;
-}

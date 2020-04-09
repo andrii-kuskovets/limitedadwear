@@ -1,0 +1,10 @@
+.list {
+    &__element {
+        &:before {
+            content: '\2022';
+            font-size: $normal;
+            color: $gold;
+            padding-right: 10px;
+        }
+    }
+}

@@ -6,16 +6,16 @@
     <title>Limitedadwear</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="body body__curtain">
+<body class="all-content all-content_darkened">
     <header class="header">
-        <div class="promo promo_hide">
+        <div class="promo promo_js">
             <div class="container">
                 <div class="promo__wrapper">
                     <div class="promo__text">
                         <span class="promo__phrase promo__phrase_bold">free 2 day shipping</span> 
                         <span class="promo__phrase">for orders over 300$</span>
                     </div>
-                    <span class="promo__close"></span>
+                    <button class="promo__close"></button>
                 </div>
             </div>
         </div>
@@ -23,44 +23,114 @@
             <div class="header__wrapper">
                 <div class="menu">
                     <nav class="menu__nav">
-                        <ul>
-                            <li><a href="#">new arrivals</a></li>
-                            <li class='menu__toplist'>
-                                <a href="#">women</a>
-                                <ul class="menu__sublist">
-                                    <li><a href="#">new</a></li>
-                                    <li><a href="#">clothing</a></li>
-                                    <li><a href="#">shoes</a></li>
-                                    <li><a href="#">accessories</a></li>
+                        <ul class="menu__list">
+                            <li class="menu__element menu__element_border">
+                                <a class="menu__link" href="#">new arrivals</a>
+                            </li>
+                            <li class='menu__element menu__element_border'>
+                                <a class='menu__link menu__link_icon js_title' href="#">women</a>
+                                <ul class="menu__sublist js_menu">
+                                    <li class="menu__element">
+                                        <a class="menu__link" href="#">new</a>
+                                    </li>
+                                    <li class="menu__element menu__toplist">
+                                        <a class="menu__link  menu__link_icon js_subtitle" href="#">clothing</a>
+                                        <ul class="menu__sublist js_submenu">
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">suits</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">pants</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">shirts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__element menu__toplist">
+                                        <a class="menu__link  menu__link_icon js_subtitle" href="#">shoes</a>
+                                        <ul class="menu__sublist js_submenu">
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">classic</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">sports</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__element">
+                                        <a class="menu__link" href="#">accessories</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="menu__toplist">
-                                <a href="#">men</a>
-                                <ul class="menu__sublist">
-                                    <li><a href="#">clothing</a></li>
-                                    <li><a href="#">shoes</a></li>
-                                    <li><a href="#">accessories</a></li>
+                            <li class="menu__element menu__element_border">
+                                <a class='menu__link  menu__link_icon js_title' href="#">men</a>
+                                <ul class="menu__sublist js_menu">
+                                    <li class="menu__element menu__toplist">
+                                        <a class="menu__link  menu__link_icon js_subtitle" href="#">clothing</a>
+                                        <ul class="menu__sublist js_submenu">
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">suits</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">pants</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">shirts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__element menu__toplist ">
+                                        <a class="menu__link  menu__link_icon js_subtitle" href="#">shoes</a>
+                                        <ul class="menu__sublist js_submenu">
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">classic</a>
+                                            </li>
+                                            <li class="menu__element">
+                                                <a class="menu__link" href="#">sports</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__element">
+                                        <a class="menu__link" href="#">accessories</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li><a href="#">topseller</a></li>
-                            <li><a href="#">gift sertificates</a></li>
+                            <li class="menu__element menu__element_border">
+                                <a class="menu__link" href="#">topseller</a>
+                            </li>
+                            <li class="menu__element menu__element_border">
+                                <a class="menu__link" href="#">gift sertificates</a>
+                            </li>
+                            <!--moved menu from header-->
                             <ul class="header__menu header__menu_active">
-                                <li><a href="#">welcome</a></li>
-                                <li><a class="header__login" href="#">login </a><a href="#">register</a></li>
-                                <li><a href="#">wishlist</a></li>
-                                <li><a href="#">gift registry</a></li>
-                                <li><a href="#">store locator</a></li>
+                                <li class="menu__element menu__element_border">
+                                    <a class="menu__link" href="#">welcome</a>
+                                </li>
+                                <li class="menu__element menu__element_border menu__element_flex">
+                                    <a class="menu__link" class="header__login" href="#">login </a>
+                                    <a href="#">register</a>
+                                </li>
+                                <li class="menu__element menu__element_border">
+                                    <a class="menu__link" href="#">wishlist</a>
+                                </li>
+                                <li class="menu__element menu__element_border">
+                                    <a class="menu__link" href="#">gift registry</a>
+                                </li>
+                                <li class="menu__element menu__element_border">
+                                    <a class="menu__link" href="#">store locator</a>
+                                </li>
                             </ul>
                         </ul>
                     </nav>
-                    <button class="hamburger">
+                    <button class="hamburger" aria-label="open menu">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
                 </div>
                 <div class="header__logo">
-                    <a href="#"><img src="img/logo.png" alt="" class="header__img"></a>
+                    <a href="/"><img src="img/logo.png" alt="Limitedadwear home" class="header__img"></a>
                 </div>
                 <div class="header__navigation">
                     <ul class="header__menu">
@@ -71,12 +141,19 @@
                         <li><a href="#">store locator</a></li>
                     </ul>
                     <div class="search">
-                        <input type="text" class="search__input" placeholder="Search">
+                        <form name="search" class="form search__form">
+                            <div class="form__wrapper">
+                                <input type="text" class="input search__input" placeholder="Search">
+                                <button class="btn search__btn"></button>
+                            </div>
+                        </form>
                         <img class="search__icon" src="icons/search.svg" alt="search">
                     </div>
                     <div class="header__cart cart">
-                        <img src="icons/cart.svg" alt="cart">
-                        <span>cart</span><span class="cart__value"></span>
+                        <a href="#" class="cart__link">
+                            <span>cart</span>
+                            <span class="cart__value"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -106,39 +183,39 @@
                         <h1 class="product__title">ashtar</h1>
                         <span class="product__subtitle">Item #7463524465766</span>
                     </div>
-                    <div class="product__info">
-                        <div class="product__rating">
-                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
-                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
-                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
-                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
-                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
-                            <div class="poroduct__review">
-                                <span><a href="#">review(s)</a></span><span><a href="#">write a review</a></span>
-                            </div>
+                </div>
+                <div class="product__info">
+                    <div class="product__rating">
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                        <div class="poroduct__review">
+                            <span><a href="#">Review(s)</a></span><span><a href="#">Write a Review</a></span>
                         </div>
-                        <div class="price">
-                            <span class="price__new">$<span class="price__value">285.00</span></span>
-                            <span class="price__old">$290</span>
-                            <span class="price__offer">Special offer 20% off on Category</span>
-                        </div>
+                    </div>
+                    <div class="price">
+                        <span class="price__new">$<span class="price__value">285.00</span></span>
+                        <span class="price__old">$290</span>
+                        <span class="price__offer">Special offer 20% off on Category</span>
                     </div>
                 </div>
                 <div class="product__options">
                     <div class="color">
                         <h5 class="color__title">color:<span class="color__change"></span></h5>
                         <ul class="color__list">
-                            <li><button class="color__btn color__btn_gold" value="Gold"></button></li>
-                            <li><button class="color__btn color__btn_brown" value="Brown"></button></li>
+                            <li><button class="btn btn_block color__btn color__btn_gold" value="Gold"></button></li>
+                            <li><button class="btn btn_block color__btn color__btn_brown" value="Brown"></button></li>
                         </ul>
                     </div>
                     <div class="size">
                         <h5 class="size__title">size:<span class="size__change"></span></h5>
                         <ul>
-                            <li><button class="size__btn" value="S">s</button></li>
-                            <li><button class="size__btn" value="M">m</button></li>
-                            <li><button class="size__btn" value="L">l</button></li>
-                            <li><button class="size__btn" value="XL">xl</button></li>
+                            <li><button class="btn btn_block size__btn" value="S">s</button></li>
+                            <li><button class="btn btn_block size__btn" value="M">m</button></li>
+                            <li><button class="btn btn_block size__btn" value="L">l</button></li>
+                            <li><button class="btn btn_block size__btn" value="XL">xl</button></li>
                         </ul>
                     </div>
                     <div class="availability"><h5>availability: <span>In Stock</span></h5></div>
@@ -151,9 +228,9 @@
                                     <span class="quanity__result"></span>
                                 </div>
                             </form>
-                            <button class="btn btn_fill">add to cart</button>
-                            <button class="btn btn_with-icon"><span class='btn__wishlist'> add to wishlist</span></button>
-                            <button class="btn btn_with-icon"><span class="btn__gift">add to giftregistry</span></button>
+                            <button class="btn btn_big btn_fill product__buy">add to cart</button>
+                            <button class="btn btn_big btn_with-icon product__wishlist"> add to wishlist</button>
+                            <button class="btn btn_big btn_with-icon product__gift">add to giftregistry</button>
                         </div>
                         <div class="share">
                             <span class="share__title">share</span>
@@ -178,11 +255,11 @@
                                 Integer posuere arcu diam, at placerat dolor ullamcorper eu. Donec a metus eu arcu iaculis sodales quis eleifend quam. 
                                 Nulla sit amet eros id massa pulvinar iaculis. 
                             </p>
-                            <ul>
-                                <li>Dark blue suit for a tone-on-tone look</li>
-                                <li>Regular fit</li>
-                                <li>100% Cotton</li>
-                                <li>Free shipping with 4 days delivery</li>
+                            <ul class="list">
+                                <li class="list__element">Dark blue suit for a tone-on-tone look</li>
+                                <li class="list__element">Regular fit</li>
+                                <li class="list__element">100% Cotton</li>
+                                <li class="list__element">Free shipping with 4 days delivery</li>
                             </ul>
                         </div>
                     </div>
@@ -311,7 +388,7 @@
                     </div>
                     <form class="form">
                         <h4>get special offers&news of the latest fashion styles</h4>
-                        <div class="form__inputs">
+                        <div class="form__wrapper">
                             <input class="form__mail" type="text" name="mail" placeholder="Email">
                             <input class="form__send" type="submit" value="">
                         </div>

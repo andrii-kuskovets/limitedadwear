@@ -59,10 +59,11 @@
 
     .form {
         margin-bottom: 25px;
-
-        &__inputs {
-            position: relative;
-            display: inline-block;
+        
+        &__wrapper {
+            border: 1px solid $gold;
+            width: 262px;
+            padding: 12px 15px;
         }
 
         h4 {
@@ -71,10 +72,8 @@
         }
 
         &__mail {
-            width: 262px;
-            padding: 12px 15px;
-            border: 1px solid $gold;
-            font-family: $general-font;
+            border: none;
+            font-weight: 400;
             font-size: $small;
             color: rgba($grey, .6);
         }
@@ -85,9 +84,7 @@
             border: none;
             width: 15px;
             height: 15px;
-            position: absolute;
-            bottom: 12px;
-            right: 10px;
+            padding: 0;
         }
     }
 
@@ -107,7 +104,7 @@
             }
 
             img {
-                max-width: 155px;
+                max-width: 120px;
             }
         }
 

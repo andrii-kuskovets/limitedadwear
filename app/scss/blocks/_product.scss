@@ -26,12 +26,45 @@
         display: flex;
         flex-direction: column-reverse;
         width: 60%;
+        order: 3;
     }
 
     &__subtitle {
-        font-family: $general-font;
+        font-weight: 400;
         font-size: $small;
         color: $grey;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    //icons for btn 
+    .btn_big {
+        margin-bottom: 15px;
+        padding: 10px 20px;
+    }
+
+    &__wishlist, &__gift {
+        &:before {
+            @include pseudo;
+            position: inherit;
+            margin-right: 9px;
+            width: 12px;
+            height: 12px;
+        }
+    }
+    &__wishlist {
+        &:before {
+            @include bg-img(url(../icons/heart.svg));
+        }
+    }
+    &__gift {
+        &:before {
+            @include bg-img(url(../icons/gift.svg));
+        }
     }
 
     .slider {
@@ -43,20 +76,32 @@
 
         &__nav {
             img {
-                padding: 15px;
+                padding: 20px;
+            }
+
+            .slick-active {
+                img {
+                    padding: 15px;
+                }
+            }
+            
+            .slick-center {
+                img {
+                    padding: 10px;
+                }
             }
         }
     }
     
 	&__options {
-        order: 3;
+        order: 4;
     }
 
     &__rating {
         span {
             padding: 0 4px;
             a {
-                font-family: $light-font;
+                font-weight: 300;
                 font-size: $small;
                 color: $blue;
             }
@@ -94,13 +139,12 @@
 
     .share {
         display: flex;
-        align-items: flex-end;
         justify-content: space-between;
         padding-bottom: 30px;
         border-bottom: 1px solid rgba($grey, .4);
 
         &__title {
-            font-family: $general-font;
+            font-weight: 400;
             font-size: $normal;
             line-height: 1.71;
             letter-spacing: 0.56px;
@@ -111,8 +155,13 @@
 
         &__list {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             width: 100%;
+
+            li {
+                margin-left: 5px;
+            }
 
             a {
                 display: inline-block;
@@ -135,7 +184,7 @@
 
     &__print {
         display: block;
-        font-family: $light-font;
+        font-weight: 300;
         font-size: 10px;
         text-align: right;
         margin: 5px 0;
@@ -156,11 +205,10 @@
 
 
         &__result {
-            font-family: $general-font;
+            font-weight: 400;
             color: $black;
             font-size: 28px;
             margin-left: 30px;
         }
     }
-
 }

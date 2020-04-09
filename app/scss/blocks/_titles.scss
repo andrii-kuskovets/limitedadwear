@@ -1,12 +1,12 @@
 h1 {
-    font-family: $general-font;
+    font-weight: 400;
     font-size: 32px;
     color: $black2;
     text-transform: uppercase;
 }
 
 h2 {
-    font-family: $light-font;
+    font-weight: 300;
     font-size: $medium;
     line-height: 2;
     letter-spacing: 1.8px;
@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-    font-family: $general-font;
+    font-weight: 400;
     font-size: $medium;
     line-height: 1.71;
     letter-spacing: 0.56px;
@@ -27,14 +27,14 @@ h3 {
 }
 
 h4 {
-    font-family: $light-font;
+    font-weight: 300;
     font-size: $small;
     color: $gold;
     text-transform: uppercase;
 }
 
 h5 {
-    font-family: $general-font;
+    font-weight: 400;
     font-size: $normal;
     line-height: 1.71;
     letter-spacing: 0.56px;
@@ -43,6 +43,7 @@ h5 {
 
     span {
         color: $black;
+        font-weight: 900;
         text-transform: none;
         padding-left: 4px;
     }

@@ -1,12 +1,22 @@
 .menu {
     position: relative;
+
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__sublist {
+        display: none;
+        margin-left: 15px;
+    }
     
     &__nav {
         background-color: rgba($blue, .8);
         width: 70%;
         height: 100vh;
-        padding: 25px;
-        margin-top: 14px;
+        margin-top: 22px;
         position: fixed;
         left: 0;
         overflow:scroll;
@@ -15,66 +25,73 @@
         transition-delay: .1s;
         z-index: 1;
 
-        .menu__sublist {
-            display: none;
-            margin-left: 15px;
-        }
-        
-        ul {
-            display: flex;
-            flex-direction: column;
-        }
-
-        li {
-            display: block;
-        }
-
-        a {
-            font-family: $light-font;
-            font-size: $medium;
-            color: $black2;
-            text-transform: uppercase;
-            text-decoration: none;
-            line-height: 5;
-            position: relative;
-            transition: all .3s cubic-bezier(.2, 0, 0, 1);
-            z-index: 1;
-            font-weight: 900;
-
-            &:after {
-                @include pseudo;
-                height: 2px;
-                width: 100%;
-                bottom: 0;
-                right: 1.25rem;
-                left: .25rem;
-                background-color: $gold;
-                transition: all .8s cubic-bezier(.2, 0, 0, 1);
-                transform-origin: bottom center;
-                z-index: -1;
-            }
-            
-            &:hover {
-                color: $black2;
-                
-                &:after {
-                    right: 0;
-                    left: 0;
-                    height: 100%;
-                }
-            }
-        }
-
         &_active {
             transform: translateX(0);
         }
+
+        a {
+            padding: 20px;
+            font-weight: 600;
+            font-size: $medium;
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            transition: all .3s cubic-bezier(.2, 0, 0, 1);
+            z-index: 1;
+
+            &:focus {
+                outline: none;
+            }
+            
+        }
+
+        .header__menu {
+            a {
+                font-size: $normal;
+                font-weight: 400;
+                margin-right: 4px;
+            }
+        }
     }
 
-    .header__menu {
-        a {
-            font-size: $normal;
-            line-height: 3;
-            margin-right: 4px;
+
+    &__element {
+        display: block;
+        height: 100%;
+        
+        &_border {
+            border-bottom: 3px dotted $white;
+        }
+
+        
+        &_flex {
+            display: flex;
+        }
+    }
+
+    &__link {
+        display: block;
+
+        &_icon {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:after {
+                @include pseudo;
+                @include bg-img(url(../icons/arrow-white.svg));
+                position: relative;
+                width: 20px;
+                height: 20px;
+            }
+
+            &_active {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 
@@ -83,7 +100,7 @@
         background-color: transparent;
         padding: 0;
         border: none;
-        width: 20px;
+        width: 22px;
         cursor: pointer;
 
         &:focus{
@@ -94,15 +111,17 @@
         span {
             display: block;
             border-bottom: 4px solid $blue;
-            margin-bottom: 3px;
+        }
+
+        span+span {
+            margin-top: 4px;
         }
 
         &_active {
             span {
-                margin-bottom: -2px;
-    
+            
                 &:nth-child(1) {
-                    transform: translateY(-10px) rotate(-45deg);
+                    transform: translateY(-1px) rotate(-45deg);
                 }
     
                 &:nth-child(2) {
@@ -110,7 +129,7 @@
                 }
     
                 &:nth-child(3) {
-                    transform: translateY(-12px) rotate(45deg);
+                    transform: translateY(-9px) rotate(45deg);
                 }
             }
         }

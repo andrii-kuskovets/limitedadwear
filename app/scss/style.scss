@@ -1,11 +1,9 @@
 @import 'libs/reset';
-@import 'base/fonts-mixin';
 @import 'base/variables';
 @import 'libs/fonts';
 @import 'libs/number_plugin';
 @import 'base/media-quaery_mixin';
 @import 'base/other-mixins';
-@import 'base/btn-mixin';
 @import 'libs/slick-theme';
 @import 'libs/slick';
 @import 'blocks/titles';
@@ -22,6 +20,8 @@
 @import 'blocks/banner';
 @import 'blocks/footer';
 @import 'blocks/body';
+@import 'blocks/form';
+@import 'blocks/list';
 
 * {
     box-sizing: border-box;
@@ -32,6 +32,19 @@
     }
 }
 
+body {
+    font-family: 'ProximaNova', serif;
+
+    ::-webkit-scrollbar {
+        width: 2px; 
+        background-color:  rgba($blue, .8);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $white;
+        border-radius: 9em;
+    }
+}
 
 .container {
     max-width: 940px;

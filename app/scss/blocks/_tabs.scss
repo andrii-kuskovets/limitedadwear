@@ -26,7 +26,7 @@
 
         
         span {
-            font-family: 'Prexima-light', serif;
+            font-weight: 300;
             font-size: $small;
             color: rgba($grey, .4);
             text-transform: uppercase;
@@ -42,25 +42,13 @@
     &__description {
         display: none;
         max-width: 783px;
-        font-family: $light-font;
+        font-weight: 300;
         font-size: $normal;
         line-height: 1.79;
         letter-spacing: 0.56px;
         margin-bottom: 15px;
         color: $black3;
         padding: 0 10px;
-
-        ul {
-            li {
-                
-                &::before {
-                    content: '\2022';
-                    font-size: $normal;
-                    color: $gold;
-                    padding-right: 10px;
-                }
-            }
-        }
 
         p {
             margin-bottom: 15px;

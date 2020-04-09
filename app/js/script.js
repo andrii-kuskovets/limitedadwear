@@ -37,6 +37,7 @@ $(document).ready(function(){
     function open(a, b) {
         $(a).on('click', function () {
             $(this).parent().siblings().find(b).hide();
+            $(this).parent().siblings().find('.menu__link_icon').removeClass('menu__link_icon_active');
             $(this).siblings(b).slideToggle("slow");
             $(this).toggleClass('menu__link_icon_active');
         });

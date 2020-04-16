@@ -1,0 +1,218 @@
+.product {
+    padding-bottom: 50px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        order: 1;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $grey;
+        border-top: 1px solid $grey;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    &__name {
+        width: 40%;
+        margin-bottom: 15px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 60%;
+        order: 3;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: $small;
+        color: $grey;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__image {
+        margin-bottom: 15px;
+    }
+
+    //icons for btn 
+    .btn_big {
+        margin-bottom: 15px;
+        padding: 10px 20px;
+    }
+
+    &__wishlist, &__gift {
+        &:before {
+            @include pseudo;
+            position: inherit;
+            margin-right: 9px;
+            width: 12px;
+            height: 12px;
+        }
+    }
+    &__wishlist {
+        &:before {
+            @include bg-img(url(../icons/heart.svg));
+        }
+    }
+    &__gift {
+        &:before {
+            @include bg-img(url(../icons/gift.svg));
+        }
+    }
+
+    .slider {
+        order: 2;
+        
+        &__items img {
+            padding: 20px;
+        }
+
+        &__nav {
+            img {
+                padding: 20px;
+            }
+
+            .slick-active {
+                img {
+                    padding: 15px;
+                }
+            }
+            
+            .slick-center {
+                img {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    
+	&__options {
+        order: 4;
+    }
+
+    &__rating {
+        span {
+            padding: 0 4px;
+            a {
+                font-weight: 300;
+                font-size: $small;
+                color: $blue;
+            }
+        }
+
+        span + span {
+            border-left: 1px solid $blue;
+        }
+        input{
+            display:none;
+        }
+        
+        label{
+            cursor:pointer;
+            font-size: $large;
+            width: 15px;
+            transition: all 0.5s ease-in;
+        
+            &:hover{
+                font-size:22px;
+            }
+            
+            &:before{
+                content: "\2605";
+                color: $gold;
+            }
+        }
+        input:checked + label ~label{
+            &:before{
+                content: "\2605";
+                color: $grey;
+            }
+        }
+    }
+
+    .share {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba($grey, .4);
+
+        &__title {
+            font-weight: 400;
+            font-size: $normal;
+            line-height: 1.71;
+            letter-spacing: 0.56px;
+            color: $grey;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+
+            li {
+                margin-left: 5px;
+            }
+
+            a {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__google {
+            background-image: url(../icons/google-plus.svg);
+        }
+
+        &__gmail {
+            background-image: url(../icons/gmail.svg);
+        }
+    }
+
+    &__print {
+        display: block;
+        font-weight: 300;
+        font-size: 10px;
+        text-align: right;
+        margin: 5px 0;
+        color: rgba($grey, .8);
+    }
+
+    .quanity {
+        margin-bottom: 15px;
+
+        h5{
+            margin-bottom: 15px;
+        }
+        
+        &__calc {
+            display: flex;
+            align-items: flex-end;
+        }
+
+
+        &__result {
+            font-weight: 400;
+            color: $black;
+            font-size: 28px;
+            margin-left: 30px;
+        }
+    }
+}

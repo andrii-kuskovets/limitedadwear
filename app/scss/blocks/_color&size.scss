@@ -1,0 +1,42 @@
+.color, 
+.size, 
+.availability {
+    margin-bottom: 15px;
+
+    li {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        padding: 3px;
+        border: 1px solid $grey;
+
+        &:hover, &:active {
+            border: 1px solid $gold;
+        }
+    }
+
+    li + li {
+        margin-left: 4px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    .color__btn {
+    
+        &_gold {
+            background-color: rgba($gold, .5);
+            
+        }
+    
+        &_brown {
+            background-color: rgba(brown,.9);
+        }
+    }
+}
+
+.availability {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($grey, .4);
+}

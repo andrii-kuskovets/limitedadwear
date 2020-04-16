@@ -1,0 +1,33 @@
+.price {
+    
+    &__new {
+        font-size: 24px;
+        color: $pink;
+    }
+
+    &__old {
+        display: inline-block;
+        position: relative;
+        font-size: $large;
+        color: $grey;
+
+        &:before {
+            @include pseudo;
+            bottom: 50%;
+            width: 100%;
+            border-bottom: 1px solid $grey;
+            transform: translateY(0px) rotate(-16deg);
+        } 
+    }
+
+    &__offer {
+        display: block;
+        max-width: 326px;
+        color: $pink;
+        background-color: rgba($gold, .1);
+        font-size: $small;
+        padding: 5px;
+        text-align: center;
+        margin: 10px 0;
+    }
+}

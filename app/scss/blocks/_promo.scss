@@ -1,0 +1,46 @@
+.promo {
+    background-color: $gold;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        text-align: center;
+        padding: 10px 0;
+        width: 98%;
+        font-family: $light-font;
+        font-size: $small;
+        line-height: 1.33;
+
+        &_footer {
+            color: $white;
+        }
+    }
+    
+    &__phrase {
+        color: $blue;
+        text-transform: uppercase;
+
+        &_bold {
+            font-family: 'Proxima-semibold', serif;
+        }
+    }
+
+    &__close {
+        @include bg-img (url(../icons/close.png));
+        display: block;
+        width: 10px;
+        background-color: transparent;
+        height: 10px;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        
+        &:focus{
+            outline: none;
+        }
+    }
+}

@@ -1,6 +1,5 @@
 .color, 
-.size, 
-.availability {
+.size {
     margin-bottom: 15px;
 
     li {
@@ -36,7 +35,10 @@
     }
 }
 
-.availability {
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba($grey, .4);
+@include respond-to('large') {
+    .color, 
+    .size {
+        margin-bottom: 25px;
+    }
 }
+

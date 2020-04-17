@@ -1,9 +1,14 @@
 .header {
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+
+    &__fixed {
         position: fixed;
         width: 100%;
         background-color: $white;
-        top: 0;
-        z-index: 1;
+    }
 
     &__wrapper {
         display: flex;
@@ -11,13 +16,40 @@
         align-items: flex-end;
         padding: 10px 0;
     }
+
+    @include respond-to('large') {
+        &__wrapper {
+            flex-wrap: wrap;
+            padding: 8px 0;
+        }
+
+        &__fixed {
+            padding-bottom: 15px;
+        }
+    }
     &__logo {
         max-width: 177px;
         margin-left: 25px;
     }
 
+    @include respond-to('large') {
+        &__logo {
+            margin-left: 0;
+            padding-bottom: 8px;
+        }
+    }
+
     &__navigation {
         display: flex;
+    }
+
+    @include respond-to('large') {
+        &__navigation {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            width: 42%;
+        }
     }
 
     &__menu {
@@ -37,6 +69,15 @@
             &:hover {
                 color: $gold;
             }
+        }
+    }
+
+    @include respond-to('large') {
+        &__menu {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
         }
     }
 
@@ -65,13 +106,20 @@
         span {
             display: none;
             font-weight: 400;
-            font-size: $medium;
+            font-size: $normal;
             color: $black2;
+            margin: 0 4px;
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .cart {
             &__link {
                 display: flex;
+                align-items: flex-end;
                 
                 &:before {
                     @include pseudo;
@@ -79,6 +127,7 @@
                     position: relative;
                     width: 20px;
                     height: 20px;
+                    margin-right: 5px;
                 }
             }
 
@@ -88,7 +137,31 @@
         }
     }
 
+    @include respond-to('large') {
+        &__cart {
+            margin-left: 0;
+            
+            span {
+                display: inline;
+            }
+        }
+    }
+
+
     &__login {
         border-right: 2px dotted $blue;
+    }
+
+    @include respond-to('large') {
+        &__login {
+            padding-right: 4px;
+            margin-right: 4px;
+        }
+    }
+}
+
+@include respond-to('large') {
+    .header {
+        margin-bottom: 188px;
     }
 }

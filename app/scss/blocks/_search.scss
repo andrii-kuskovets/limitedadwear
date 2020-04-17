@@ -21,10 +21,24 @@
         
     }
 
+    @include respond-to('large') {
+        &__form {
+            position: relative;
+            display: block;
+            bottom: 0;
+        }
+    }
+
     &__icon {
         cursor: pointer;
         width: 20px;
         height: 20px;
+    }
+
+    @include respond-to('large') {
+        &__icon {
+            display: none;
+        }
     }
 
     &__btn {
@@ -42,8 +56,34 @@
         }
     }
 
+    @include respond-to('large') {
+        
+        &__btn {
+            width: 25px;
+            height: 25px;
+
+            &:after {
+                @include bg-img(url(../icons/search.svg));
+                transform: rotate(0);
+                width: 20px;
+                height: 20px;
+                opacity: .5;
+            }
+        }
+    
+}
+
     &__input {
-        padding: 12px 5px;
+        padding: 12px 10px;
+        font-size: 12px;
+        opacity: .5;
+    }
+}
+
+@include respond-to('large') {
+    .search {
+        width: 267px;
+        margin-right: 28px;
     }
 }
 

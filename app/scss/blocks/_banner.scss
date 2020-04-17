@@ -4,7 +4,7 @@
     border-bottom: 1px solid rgba($grey, .4);
 
     &__wrapper {
-        @include bg-img (url("http://placekitten.com/1146/612"));
+        @include bg-img (url("http://placekitten.com/1100/600"));
         padding: 120px 0;
         cursor: pointer;
     }
@@ -14,24 +14,57 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
     }
 
+    @include respond-to('small') {
+        &__heading {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    
     &__sale {
         border: 15px solid $gold;
         background-color: rgba($blue, .4);
         width: 200px;
         height: 200px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        span {
-            font-weight: 100;
+        .banner__sale_big {
             font-size: 60px;
+        }
+
+        span {
+            display: block;
+            font-weight: 100;
+            font-size: 34px;
             letter-spacing: 5.96px;
             color:$white;
             text-align: center;
+        }
+    }
+
+    @include respond-to('small') {
+        &__sale {
+            background-color: rgba($blue, 1);
+            border-left: none;
+        }
+    }
+
+    @include respond-to('medium') {
+        &__sale {
+            width: 345px;
+            height: 365px;
+            border: 22px solid $gold;
+            border-left: none;
+            
+            .banner__sale_big {
+                font-size: 149px;
+            }
         }
     }
 
@@ -45,16 +78,37 @@
         text-transform: uppercase;
 
         &_block {
+            font-weight: 600;
             display: block;
             color: $blue;
             font-size: 60px;
-            font-family: 'Proxima-semibold', serif;
         }
 
         &_bg {
             display: block;
             color: $white;
             background-color: $gold;
+        }
+    }
+
+    @include respond-to('small') {
+        &__title {
+            margin-right: 46px;
+        }
+    }
+
+    @include respond-to('medium') {
+        &__title {
+            margin-right: 86px;
+            font-size: 34px;
+
+            &_block {
+                font-size: 81px;
+            }
+
+            &_bg {
+                font-size: 34px;
+            }
         }
     }
 }

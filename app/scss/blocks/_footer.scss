@@ -2,10 +2,8 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-    }
 
-    @include respond-to('medium') {
-        &__wrapper {
+        @include respond-to('medium') {
             flex-direction: row;
             justify-content: space-between;
         }

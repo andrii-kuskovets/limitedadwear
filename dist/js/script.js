@@ -7,14 +7,16 @@ $(document).ready(function(){
 
     $(window).on('scroll', function() {
         if($(this).scrollTop() >= 2) {
-            $('.js_promo').hide(300);
+            $('.js_promo').slideUp(300);
+            $('.header__fixed').addClass('header__fixed_active');
 
             if ($(window).width() > 1200) {
-                $('.menu').hide(300);
+                $('.menu').slideUp(300);
             }
         } else {
-            $('.js_promo').show(300);
-            $('.menu').show(300);
+            $('.js_promo').slideDown(300);
+            $('.header__fixed').removeClass('header__fixed_active');
+            $('.menu').slideDown(300);
         }
     });
 
@@ -119,7 +121,7 @@ $(document).ready(function(){
         }
     });
 
-    
+
     //slider
     $('.slider__items').slick({
         slidesToShow: 1,

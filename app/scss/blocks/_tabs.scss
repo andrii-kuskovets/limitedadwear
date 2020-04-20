@@ -2,10 +2,8 @@
     &__items {
         display: flex;
         flex-direction: column;
-    }
-
-    @include respond-to('medium') {
-        &__items {
+        
+        @include respond-to('medium') {
             display: block;
         }
     }
@@ -13,10 +11,8 @@
     &__item {
         margin-bottom: 15px;
         border-bottom: 1px solid rgba($grey, .4);
-    }
-
-    @include respond-to('medium') {
-        &__item {
+    
+        @include respond-to('medium') {
             display: none;
             border-bottom:none;
             margin-bottom: none;
@@ -36,6 +32,14 @@
         cursor: pointer;
         position: relative;
 
+        @include respond-to('medium') {
+            padding: 22px 0;
+            width: 226px;
+            border: 1px solid rgba($grey, .4);
+            margin-right: 4px;
+            text-align: center;
+        }
+
         &:after {
             @include pseudo;
             @include bg-img (url(../icons/triangular.svg));
@@ -44,6 +48,10 @@
             right: 10%;
             top: 10px;
             transform: rotate(180deg);
+
+            @include respond-to('medium') {
+                background-image: none;
+            }
         }
 
         
@@ -52,22 +60,8 @@
             font-size: $small;
             color: rgba($grey, .4);
             text-transform: uppercase;
-        }
-    }
 
-    @include respond-to('medium') {
-        &__name {
-            padding: 22px 0;
-            width: 226px;
-            border: 1px solid rgba($grey, .4);
-            margin-right: 4px;
-            text-align: center;
-
-            &:after {
-                background-image: none;
-            }
-
-            span {
+            @include respond-to('medium') {
                 font-size: $normal;
             }
         }
@@ -77,6 +71,11 @@
         display: none;
         margin-bottom: 30px;
         border-bottom: 1px solid rgba( $gold, .7);
+
+        @include respond-to('medium') {
+            display: flex;
+            align-items: flex-start;
+        }
 
         .tabs__name {
             border-bottom: none;
@@ -89,13 +88,6 @@
             span {
                 color: $black;
             }
-        }
-    }
-
-    @include respond-to('medium') {
-        &__list-for-desktop {
-            display: flex;
-            align-items: flex-start;
         }
     }
 
@@ -121,18 +113,16 @@
         color: $black3;
         padding: 0 10px;
 
+        @include respond-to('medium') {
+            display: block!important;
+        }
+
         p {
             margin-bottom: 15px;
 
             span {
                 font-weight: bold;
             }
-        }
-    }
-
-    @include respond-to('medium') {
-        &__description {
-            display: block!important;
         }
     }
 }

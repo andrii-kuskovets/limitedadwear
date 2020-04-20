@@ -14,15 +14,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
 
-    @include respond-to('small') {
-        &__heading {
+        @include respond-to('small') {
             flex-direction: row;
             justify-content: space-between;
         }
     }
-
     
     &__sale {
         border: 15px solid $gold;
@@ -34,8 +31,24 @@
         align-items: center;
         justify-content: center;
 
+        @include respond-to('small') {
+            background-color: rgba($blue, 1);
+            border-left: none;
+        }
+    
+        @include respond-to('medium') {
+            width: 345px;
+            height: 365px;
+            border: 22px solid $gold;
+            border-left: none;
+        }
+
         .banner__sale_big {
             font-size: 60px;
+
+            @include respond-to('medium') {
+                font-size: 149px;
+            }
         }
 
         span {
@@ -48,26 +61,6 @@
         }
     }
 
-    @include respond-to('small') {
-        &__sale {
-            background-color: rgba($blue, 1);
-            border-left: none;
-        }
-    }
-
-    @include respond-to('medium') {
-        &__sale {
-            width: 345px;
-            height: 365px;
-            border: 22px solid $gold;
-            border-left: none;
-            
-            .banner__sale_big {
-                font-size: 149px;
-            }
-        }
-    }
-
     &__title {
         font-weight: 100;
         font-size: 30px;
@@ -77,17 +70,34 @@
         color: $black;
         text-transform: uppercase;
 
+        @include respond-to('small') {
+            margin-right: 46px;
+        }
+    
+        @include respond-to('medium') {
+            margin-right: 86px;
+            font-size: 34px;
+        }
+
         &_block {
             font-weight: 600;
             display: block;
             color: $blue;
             font-size: 60px;
+
+            @include respond-to('medium') {
+                font-size: 81px;
+            }
         }
 
         &_bg {
             display: block;
             color: $white;
             background-color: $gold;
+
+            @include respond-to('medium') {
+                font-size: 34px;
+            }
         }
     }
 

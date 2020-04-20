@@ -2,6 +2,11 @@
 .size {
     margin-bottom: 15px;
 
+    @include respond-to('large') {
+        margin-bottom: 25px;
+    }
+    
+
     li {
         display: inline-block;
         width: 35px;
@@ -35,10 +40,4 @@
     }
 }
 
-@include respond-to('large') {
-    .color, 
-    .size {
-        margin-bottom: 25px;
-    }
-}
 

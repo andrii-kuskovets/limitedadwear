@@ -4,10 +4,23 @@
     z-index: 1;
     margin-bottom: 15px;
 
+    @include respond-to('large') {
+        margin-bottom: 188px;
+    }
+
     &__fixed {
         position: fixed;
         width: 100%;
         background-color: $white;
+
+        &_active {
+            box-shadow: 0px 9px 18px $blue;
+        }
+
+        @include respond-to('large') {
+            flex-wrap: wrap;
+            padding: 8px 0;
+        }
     }
 
     &__wrapper {
@@ -15,25 +28,18 @@
         justify-content: space-between;
         align-items: flex-end;
         padding: 10px 0;
-    }
 
-    @include respond-to('large') {
-        &__wrapper {
+        @include respond-to('large') {
             flex-wrap: wrap;
             padding: 8px 0;
         }
-
-        &__fixed {
-            padding-bottom: 15px;
-        }
     }
+
     &__logo {
         max-width: 177px;
         margin-left: 25px;
-    }
 
-    @include respond-to('large') {
-        &__logo {
+        @include respond-to('large') {
             margin-left: 0;
             padding-bottom: 8px;
         }
@@ -41,10 +47,8 @@
 
     &__navigation {
         display: flex;
-    }
 
-    @include respond-to('large') {
-        &__navigation {
+        @include respond-to('large') {
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-end;
@@ -54,6 +58,13 @@
 
     &__menu {
         display: none;
+
+        @include respond-to('large') {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
         
         &_active {
             display: flex;
@@ -69,15 +80,6 @@
             &:hover {
                 color: $gold;
             }
-        }
-    }
-
-    @include respond-to('large') {
-        &__menu {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            margin-bottom: 20px;
         }
     }
 
@@ -150,18 +152,10 @@
 
     &__login {
         border-right: 2px dotted $blue;
-    }
 
-    @include respond-to('large') {
-        &__login {
+        @include respond-to('large') {
             padding-right: 4px;
             margin-right: 4px;
         }
-    }
-}
-
-@include respond-to('large') {
-    .header {
-        margin-bottom: 188px;
     }
 }

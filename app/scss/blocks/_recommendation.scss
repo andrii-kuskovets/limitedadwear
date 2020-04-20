@@ -1,4 +1,12 @@
 .recommendation {
+
+    @include respond-to('medium') {
+        padding-bottom: 30px;
+    }
+    
+    @include respond-to('large') {
+        padding-bottom: 70px;
+    }
     
     &__heading {
         margin-bottom: 10px;
@@ -42,6 +50,10 @@
     &__buttons {
         display: none;
 
+        @include respond-to('large') {
+            display: block;
+        }
+
         .btn_next,
         .btn_prev {
             top: 38%;
@@ -54,22 +66,6 @@
             right: 18px;
         }
     }
-
-    @include respond-to('large') {
-        &__buttons {
-            display: block;
-        }
-    }
 }
 
-@include respond-to('medium') {
-    .recommendation {
-        padding-bottom: 30px;
-    }
-}
 
-@include respond-to('large') {
-    .recommendation {
-        padding-bottom: 70px;
-    }
-}

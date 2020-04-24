@@ -89,8 +89,8 @@ $(document).ready(function(){
 
     $('.menu__nav').on('mouseleave', function() {
         if ($(window).width() > 1199) {
+            $('.menu__element_border').children().removeClass('menu__link_icon_active');
             $('.menu__element_block').removeClass('menu__element_block_active');
-            $('.menu__link_icon').removeClass('menu__link_icon_active');
         }
     });
         

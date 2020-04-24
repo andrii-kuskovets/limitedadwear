@@ -48,6 +48,11 @@
             color: $blue;
             text-decoration: none;
             border-bottom: 1px solid rgba($blue, .4);
+
+            &:hover {
+                color: $gold;
+                border-bottom: 1px solid rgba($gold, .4);
+            }
         }
 
         &_active {

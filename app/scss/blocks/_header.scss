@@ -19,7 +19,7 @@
 
         @include respond-to('large') {
             flex-wrap: wrap;
-            padding: 8px 0;
+            padding: 8px 0 30px 0;
         }
     }
 

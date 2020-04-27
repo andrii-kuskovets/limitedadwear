@@ -1,5 +1,5 @@
 .promo {
-    background-color: $gold;
+    background-color: rgba($gold, .4);
 
     &__wrapper {
         display: flex;
@@ -8,10 +8,11 @@
     }
 
     &__text {
+        font-weight: 400;
         text-align: center;
         padding: 10px 0;
         width: 98%;
-        font-family: $light-font;
+        font-weight: 300;
         font-size: $small;
         line-height: 1.33;
 
@@ -25,7 +26,7 @@
         text-transform: uppercase;
 
         &_bold {
-            font-family: 'Proxima-semibold', serif;
+            font-weight: 600;
         }
     }
 
@@ -38,9 +39,9 @@
         border: none;
         cursor: pointer;
         padding: 0;
-        
+
         &:focus{
-            outline: none;
+            outline: rgba($grey, .4);
         }
     }
 }

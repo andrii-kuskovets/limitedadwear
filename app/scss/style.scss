@@ -1,9 +1,8 @@
 @import 'libs/reset';
 @import 'base/variables';
-@import 'libs/fonts';
+@import 'base/fonts';
 @import 'libs/number_plugin';
-@import 'base/media-quaery_mixin';
-@import 'base/other-mixins';
+@import 'base/mixins';
 @import 'libs/slick-theme';
 @import 'libs/slick';
 @import 'blocks/titles';
@@ -16,12 +15,14 @@
 @import 'blocks/color&size';
 @import 'blocks/buttons';
 @import 'blocks/tabs';
-@import 'blocks/recomendation';
+@import 'blocks/recommendation';
 @import 'blocks/banner';
 @import 'blocks/footer';
 @import 'blocks/body';
 @import 'blocks/form';
 @import 'blocks/list';
+@import 'blocks/share';
+@import 'blocks/accordion';
 
 * {
     box-sizing: border-box;
@@ -47,7 +48,7 @@ body {
 }
 
 .container {
-    max-width: 940px;
+    max-width: 1146px;
     margin: 0 auto;
     padding: 0 15px;
 }

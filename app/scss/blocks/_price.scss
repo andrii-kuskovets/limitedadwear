@@ -1,8 +1,10 @@
 .price {
+    margin-bottom: 10px;
     
     &__new {
         font-size: 24px;
         color: $pink;
+        margin-right: 10px;
     }
 
     &__old {
@@ -18,16 +20,5 @@
             border-bottom: 1px solid $grey;
             transform: translateY(0px) rotate(-16deg);
         } 
-    }
-
-    &__offer {
-        display: block;
-        max-width: 326px;
-        color: $pink;
-        background-color: rgba($gold, .1);
-        font-size: $small;
-        padding: 5px;
-        text-align: center;
-        margin: 10px 0;
     }
 }

@@ -1,7 +1,11 @@
 .color, 
-.size, 
-.availability {
+.size {
     margin-bottom: 15px;
+
+    @include respond-to('large') {
+        margin-bottom: 25px;
+    }
+    
 
     li {
         display: inline-block;
@@ -36,7 +40,4 @@
     }
 }
 
-.availability {
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba($grey, .4);
-}
+

@@ -1,5 +1,5 @@
 $breakpoints: (
-    'small':  ( min-width:  767px ),
+    'small':  ( min-width:  768px ),
     'medium': ( min-width:  992px ),
     'large':  ( min-width: 1200px )
 ) !default;
@@ -18,3 +18,17 @@ $breakpoints: (
             + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }
+
+@mixin pseudo {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+@mixin bg-img ($bg-url) {
+    background-image: $bg-url;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

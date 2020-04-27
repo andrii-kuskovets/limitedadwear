@@ -1,0 +1,21 @@
+.share {
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    li + li {
+        margin-left: 10px;
+    }
+
+    a {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
+
+

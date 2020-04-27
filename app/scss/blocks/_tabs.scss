@@ -1,0 +1,129 @@
+.tabs {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        
+        @include respond-to('medium') {
+            display: block;
+        }
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba($grey, .4);
+    
+        @include respond-to('medium') {
+            display: none;
+            border-bottom:none;
+            margin-bottom: none;
+
+            &_active {
+                display: block;
+            }
+            
+            .js_tab-title {
+                display: none;
+            }
+        }
+    }
+
+    &__name {
+        padding: 10px 15px 25px 15px;
+        cursor: pointer;
+        position: relative;
+
+        @include respond-to('medium') {
+            padding: 22px 0;
+            width: 226px;
+            border: 1px solid rgba($grey, .4);
+            margin-right: 4px;
+            text-align: center;
+        }
+
+        &:after {
+            @include pseudo;
+            @include bg-img (url(../icons/triangular.svg));
+            width: 15px;
+            height: 15px;
+            right: 10%;
+            top: 10px;
+            transform: rotate(180deg);
+
+            @include respond-to('medium') {
+                background-image: none;
+            }
+        }
+
+        
+        span {
+            font-weight: 300;
+            font-size: $small;
+            color: rgba($grey, .4);
+            text-transform: uppercase;
+
+            @include respond-to('medium') {
+                font-size: $normal;
+            }
+        }
+    }
+
+    &__list-for-desktop {
+        display: none;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba( $gold, .7);
+
+        @include respond-to('medium') {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tabs__name {
+            border-bottom: none;
+        }
+
+        .active {
+            border: 1px solid rgba( $gold, .7);
+            border-bottom: none;
+
+            span {
+                color: $black;
+            }
+        }
+    }
+
+    .tabs__name.active {
+
+        span {
+            color: $black;
+        }
+        
+        &:after {
+            transform: rotate(0deg);
+        }
+    }
+
+    &__description {
+        display: none;
+        max-width: 783px;
+        font-weight: 300;
+        font-size: $normal;
+        line-height: 1.79;
+        letter-spacing: 0.56px;
+        margin-bottom: 15px;
+        color: $black3;
+        padding: 0 10px;
+
+        @include respond-to('medium') {
+            display: block!important;
+        }
+
+        p {
+            margin-bottom: 15px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+

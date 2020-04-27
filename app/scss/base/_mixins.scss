@@ -1,0 +1,34 @@
+$breakpoints: (
+    'small':  ( min-width:  768px ),
+    'medium': ( min-width:  992px ),
+    'large':  ( min-width: 1200px )
+) !default;
+
+/// @param {String} $breakpoint 
+/// @require $breakpoints
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin pseudo {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+@mixin bg-img ($bg-url) {
+    background-image: $bg-url;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

@@ -1,0 +1,24 @@
+.price {
+    margin-bottom: 10px;
+    
+    &__new {
+        font-size: 24px;
+        color: $pink;
+        margin-right: 10px;
+    }
+
+    &__old {
+        display: inline-block;
+        position: relative;
+        font-size: $large;
+        color: $grey;
+
+        &:before {
+            @include pseudo;
+            bottom: 50%;
+            width: 100%;
+            border-bottom: 1px solid $grey;
+            transform: translateY(0px) rotate(-16deg);
+        } 
+    }
+}

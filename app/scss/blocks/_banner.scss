@@ -1,0 +1,124 @@
+.banner {
+    margin-bottom: 16px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($grey, .4);
+
+    &__wrapper {
+        @include bg-img (url("http://placekitten.com/1100/600"));
+        padding: 120px 0;
+        cursor: pointer;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include respond-to('small') {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    
+    &__sale {
+        border: 15px solid $gold;
+        background-color: rgba($blue, .4);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include respond-to('small') {
+            background-color: rgba($blue, 1);
+            border-left: none;
+        }
+    
+        @include respond-to('medium') {
+            width: 345px;
+            height: 365px;
+            border: 22px solid $gold;
+            border-left: none;
+        }
+
+        .banner__sale_big {
+            font-size: 60px;
+
+            @include respond-to('medium') {
+                font-size: 149px;
+            }
+        }
+
+        span {
+            display: block;
+            font-weight: 100;
+            font-size: 34px;
+            letter-spacing: 5.96px;
+            color:$white;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-weight: 100;
+        font-size: 30px;
+        line-height: 1.45;
+        letter-spacing: 2.64px;
+        text-align: center;
+        color: $black;
+        text-transform: uppercase;
+
+        @include respond-to('small') {
+            margin-right: 46px;
+        }
+    
+        @include respond-to('medium') {
+            margin-right: 86px;
+            font-size: 34px;
+        }
+
+        &_block {
+            font-weight: 600;
+            display: block;
+            color: $blue;
+            font-size: 60px;
+
+            @include respond-to('medium') {
+                font-size: 81px;
+            }
+        }
+
+        &_bg {
+            display: block;
+            color: $white;
+            background-color: $gold;
+
+            @include respond-to('medium') {
+                font-size: 34px;
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        &__title {
+            margin-right: 46px;
+        }
+    }
+
+    @include respond-to('medium') {
+        &__title {
+            margin-right: 86px;
+            font-size: 34px;
+
+            &_block {
+                font-size: 81px;
+            }
+
+            &_bg {
+                font-size: 34px;
+            }
+        }
+    }
+}

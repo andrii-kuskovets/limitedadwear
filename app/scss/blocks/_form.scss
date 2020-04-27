@@ -1,0 +1,25 @@
+.form {
+    &__wrapper {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: $blue;
+    font-weight: bold;
+
+    &::placeholder {
+        color: $blue;
+        font-weight: 300;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}

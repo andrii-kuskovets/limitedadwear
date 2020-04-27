@@ -1,0 +1,161 @@
+.header {
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+
+    @include respond-to('large') {
+        margin-bottom: 188px;
+    }
+
+    &__fixed {
+        position: fixed;
+        width: 100%;
+        background-color: $white;
+
+        &_active {
+            box-shadow: 0px 9px 18px rgba(0,0,0, 0.1);
+        }
+
+        @include respond-to('large') {
+            flex-wrap: wrap;
+            padding: 8px 0 30px 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 10px 0;
+
+        @include respond-to('large') {
+            flex-wrap: wrap;
+            padding: 8px 0;
+        }
+    }
+
+    &__logo {
+        max-width: 177px;
+        margin-left: 25px;
+
+        @include respond-to('large') {
+            margin-left: 0;
+            padding-bottom: 8px;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+
+        @include respond-to('large') {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            width: 42%;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include respond-to('large') {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        &_active {
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            font-weight: 300;
+            font-size: 10px;
+            color: $blue;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+
+    &__cart {
+        margin-left: 10px;
+        display: flex;
+        position: relative;
+
+        &_active {
+            &:after {
+                @include pseudo;
+                width: 15px;
+                height: 15px;
+                background-color: $pink;
+                border-radius: 50%;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        img {
+            width: 30px;
+            height: 26px;
+        }
+
+        span {
+            display: none;
+            font-weight: 400;
+            font-size: $normal;
+            color: $black2;
+            margin: 0 4px;
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .cart {
+            &__link {
+                display: flex;
+                align-items: flex-end;
+                
+                &:before {
+                    @include pseudo;
+                    @include bg-img(url(../icons/cart.svg));
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                }
+            }
+
+            &__value {
+                display: inline;
+            }
+        }
+    }
+
+    @include respond-to('large') {
+        &__cart {
+            margin-left: 0;
+            
+            span {
+                display: inline;
+            }
+        }
+    }
+
+
+    &__login {
+        border-right: 2px dotted $blue;
+
+        @include respond-to('large') {
+            padding-right: 4px;
+            margin-right: 4px;
+        }
+    }
+}

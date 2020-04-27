@@ -1,0 +1,43 @@
+.color, 
+.size {
+    margin-bottom: 15px;
+
+    @include respond-to('large') {
+        margin-bottom: 25px;
+    }
+    
+
+    li {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        padding: 3px;
+        border: 1px solid $grey;
+
+        &:hover, &:active {
+            border: 1px solid $gold;
+        }
+    }
+
+    li + li {
+        margin-left: 4px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    .color__btn {
+    
+        &_gold {
+            background-color: rgba($gold, .5);
+            
+        }
+    
+        &_brown {
+            background-color: rgba(brown,.9);
+        }
+    }
+}
+
+

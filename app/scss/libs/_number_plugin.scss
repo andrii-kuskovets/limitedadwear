@@ -22,6 +22,10 @@
     cursor: pointer;
     border-left: 1px solid rgba( #a4a4a4, .4);
 
+    &:hover {
+        border: 1px solid $gold;
+    }
+
     &:after {
         content: '';
         display: block;
@@ -47,6 +51,10 @@
     cursor: pointer;
     border-top: 1px solid rgba( #a4a4a4, .4);
     border-left: 1px solid rgba( #a4a4a4, .4);
+
+    &:hover {
+        border: 1px solid $gold;
+    }
 
     &:after {
         content: '';

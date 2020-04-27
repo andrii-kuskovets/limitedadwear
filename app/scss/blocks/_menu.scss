@@ -38,7 +38,7 @@
         &_for-desktop {
             @include respond-to('large') {
                 flex-direction: column;
-            
+                            
                 .menu__link_none {
                     display: none;
                 }
@@ -47,12 +47,23 @@
                     &_active {
                         display: flex!important;
                     }
+
+                    .menu__link {
+                        padding: 0 0 10px 0;
+                    }
                 }
 
                 .menu__sublist_column {
+                    margin-bottom: 20px;
+
                     &_active {
                         display: flex!important;
                         flex-direction: column;
+                    }
+
+                    .menu__link {
+                        text-transform: capitalize;
+                        padding: 10px 0;
                     }
                 }
 
@@ -133,11 +144,6 @@
                 color: $black;
                 width: 100%;
             }
-
-            &:focus {
-                outline: none;
-            }
-            
         }
 
         &_for-desktop {
@@ -163,8 +169,7 @@
 
     &__element {
         display: block;
-        height: 100%;
-
+        
         @include respond-to('large') {
             width: 100%;
         }
@@ -241,11 +246,6 @@
     @include respond-to('large') {
         display: none;
     }
-
-    &:focus{
-        outline: none;
-    }
-
     
     span {
         display: block;

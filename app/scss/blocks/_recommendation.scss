@@ -30,6 +30,11 @@
             width: auto;
             width: 266px;
             height: 342px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 1.5px 2.6px 21px 0 rgba($blue, 0.75);
+            }
         }
     }
 

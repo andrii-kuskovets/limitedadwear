@@ -121,6 +121,11 @@
         img {
             width: auto;
             margin: 0 auto;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 1.5px 2.6px 21px 0 rgba($blue, 0.75);
+            }
 
             @include respond-to('large') {
                 width: 100%;

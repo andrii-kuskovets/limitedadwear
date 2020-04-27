@@ -6,10 +6,6 @@
     padding: 0;
     border: none;
 
-    &:focus{
-        outline: none;
-    }
-
     &_big {
         width: 200px;
         border: 1px solid rgba($grey, .4);
@@ -104,6 +100,10 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
+        &:hover {
+            border: 1px solid $gold;
+        }
 
         &:before {
             @include pseudo;
